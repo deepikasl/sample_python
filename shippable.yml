@@ -9,10 +9,30 @@ python:
   - pypy
 
 build:
+  pre_ci:
+    - echo "this is master branch"
+    - jfrog rt u testoct.sh test-jfrog-ship
+    - jfrog rt dl test-jfrog-ship/testoct.sh
+    
   ci:
     - pip install -r requirements.txt
+    - echo $JOB_TRIGGERED_BY_NAME
+    - echo $JOB_TRIGGERED_BY_ID
+    - jfrog rt u sample_file.tgz test-jfrog-ship
+    - jfrog rt dl test-jfrog-ship/echo.sh
+    - ls
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - which python
     - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
     - coverage xml -o shippable/codecoverage/coverage.xml
+    
+  post_ci:
+    - jfrog rt u testoctpostci.sh test-jfrog-ship
+    - jfrog rt dl test-jfrog-ship/testoctpostci.sh
+
+integrations:
+  hub:
+    - integrationName: jfrognew
+      type: artifactory
+      
