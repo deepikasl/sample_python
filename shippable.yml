@@ -7,8 +7,8 @@ python:
 build:
   pre_ci:
     - echo "this is master branch"
-    - jfrog rt u testoct.sh test-jfrog-ship
-    - jfrog rt dl test-jfrog-ship/testoct.sh
+    #- jfrog rt u testoct.sh test-jfrog-ship
+    #- jfrog rt dl test-jfrog-ship/testoct.sh
     
   ci:
     - pip install -r requirements.txt
