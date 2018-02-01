@@ -14,8 +14,10 @@ build:
     - pip install -r requirements.txt
     - echo $JOB_TRIGGERED_BY_NAME
     - echo $JOB_TRIGGERED_BY_ID
-    - jfrog rt u sample_file.tgz test-jfrog-ship
-    - jfrog rt dl test-jfrog-ship/echo.sh
+   # - jfrog rt u sample_file.tgz test-jfrog-ship
+    - jfrog rt u testoct.sh test-jfrog-ship
+    - jfrog rt dl test-jfrog-ship/testoct.sh
+    #- jfrog rt dl test-jfrog-ship/echo.sh
     - ls
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
