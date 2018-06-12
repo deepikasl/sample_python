@@ -45,7 +45,7 @@ build:
       echo "ENV1=$ENV1"
       echo "ENV2=$ENV2"
       echo "ENVG=$ENVG"
-      echo "$SHIPPABLE_PYTHON_VERSION=$$SHIPPABLE_PYTHON_VERSION"
+      echo "SHIPPABLE_PYTHON_VERSION=$SHIPPABLE_PYTHON_VERSION"
     - |
       if [ "$ENV1" == "foo" ]; then
         if [ "$ENV2" != "bar" ]; then
