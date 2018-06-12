@@ -13,8 +13,8 @@ env:
   matrix:
     - ENV1: "foo"
       ENV2: "bar"
-    - ENV1: "boo"
-      ENV2: "car"
+    - ENV1: "boo1"
+      ENV2: "car1"
 
 matrix:
 #  exclude:
