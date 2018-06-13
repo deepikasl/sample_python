@@ -25,6 +25,8 @@ build:
     - docker info
     - docker ps 
   #  - sleep 3m
+  
+  cache: true
 
 integrations:    
   notifications:
