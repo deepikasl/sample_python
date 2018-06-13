@@ -27,7 +27,9 @@ build:
   #  - sleep 3m
   
   cache: true
-
+  cache_dir_list:  
+     - $SHIPPABLE_BUILD_DIR/shippable.yml
+     
 integrations:    
   notifications:
 
