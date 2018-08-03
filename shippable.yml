@@ -8,7 +8,7 @@ python:
  # - 2.7
  # - 3.2
  # - 3.3
-  - 3.4
+  - 3.7
  # - pypy
  # - pypy3
 
@@ -27,8 +27,8 @@ build:
   #  - sleep 3m
   
   cache: true
-  cache_dir_list:  
-     - $SHIPPABLE_BUILD_DIR/shippable.yml
+  #cache_dir_list:  
+   #  - $SHIPPABLE_BUILD_DIR/shippable.yml
      
 integrations:    
   notifications:
