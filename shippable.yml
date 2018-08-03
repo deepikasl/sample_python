@@ -7,6 +7,9 @@ python:
  # - pypy3
 
 build:
+  pre_ci:
+    - docker build -t=shippabledocker/sample_node_pvt:masterpyt .
+    
   ci:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
@@ -19,7 +22,16 @@ build:
     - docker info
     - docker ps 
   #  - sleep 3m
-  
+
+  post_ci:
+    - docker push shippabledocker/sample_node_pvt:masterpyt
+    
   cache: true
   cache_dir_list:  
     - $SHIPPABLE_BUILD_DIR/shippable.yml
+    
+integrations:    
+  hub:
+      #Docker integration
+    - integrationName: docker
+      type: dockerRegistryLogin
