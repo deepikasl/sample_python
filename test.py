@@ -6,11 +6,14 @@ class TestSuite(unittest.TestCase):
     def test(self):
         app = App()
         app.calculate()
-        app.calculate2()
         self.failIf(app.retrieve() != 62)
+
+class TestSuite2(unittest.TestCase2):
+    def test(self):
+        app = App()
+        app.calculate2()
         self.failIf(app.retrieve2() != 82)
-
-
+        
 def main():
     unittest.main()
 
