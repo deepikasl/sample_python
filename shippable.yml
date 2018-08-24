@@ -3,7 +3,7 @@ language: python
 python: 
  # - 2.7
   - 3.7
- # - pypy
+  - pypy
  # - pypy3
 
 build:
@@ -55,4 +55,4 @@ integrations:
   hub:
       #Docker integration
     - integrationName: docker
-      type: dockerRegistryLogin
+      type: dockerRegistryLogin 
