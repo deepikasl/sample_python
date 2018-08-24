@@ -86,7 +86,7 @@ class TestSuite(unittest.TestCase):
     def test17(self):
         app = App()
         app.calculate17()
-        self.failIf(app.retrieve17() != 292)
+        self.failIf(app.retrieve17() != 382)
 
     def test18(self):
         app = App()
@@ -96,7 +96,7 @@ class TestSuite(unittest.TestCase):
     def test19(self):
         app = App()
         app.calculate19()
-        self.failIf(app.retrieve19() != 108)
+        self.failIf(app.retrieve19() != 208)
 
     def test20(self):
         app = App()
