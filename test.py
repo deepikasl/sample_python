@@ -77,6 +77,71 @@ class TestSuite(unittest.TestCase):
         app = App()
         app.calculate15()
         self.failIf(app.retrieve15() != 168)
+    
+    def test16(self):
+        app = App()
+        app.calculate16()
+        self.failIf(app.retrieve16() != 89)
+        
+    def test17(self):
+        app = App()
+        app.calculate17()
+        self.failIf(app.retrieve17() != 292)
+
+    def test18(self):
+        app = App()
+        app.calculate18()
+        self.failIf(app.retrieve18() != 301)
+        
+    def test19(self):
+        app = App()
+        app.calculate19()
+        self.failIf(app.retrieve19() != 108)
+
+    def test20(self):
+        app = App()
+        app.calculate20()
+        self.failIf(app.retrieve20() != 109)
+        
+    def test21(self):
+        app = App()
+        app.calculate21()
+        self.failIf(app.retrieve21() != 462)
+
+    def test22(self):
+        app = App()
+        app.calculate22()
+        self.failIf(app.retrieve22() != 361)
+      
+    def test23(self):
+        app = App()
+        app.calculate23()
+        self.failIf(app.retrieve23() != 248)
+
+    def test24(self):
+        app = App()
+        app.calculate24()
+        self.failIf(app.retrieve24() != 129)
+        
+    def test25(self):
+        app = App()
+        app.calculate25()
+        self.failIf(app.retrieve25() != 542)
+        
+    def test26(self):
+        app = App()
+        app.calculate26()
+        self.failIf(app.retrieve26() != 421)
+
+    def test27(self):
+        app = App()
+        app.calculate27()
+        self.failIf(app.retrieve27() != 288)
+        
+    def test28(self):
+        app = App()
+        app.calculate28()
+        self.failIf(app.retrieve28() != 298)
         
 def main():
     unittest.main()
