@@ -15,6 +15,19 @@ class App():
         self.var13 = 75
         self.var14 = 80
         self.var15 = 85
+        self.var16 = 90
+        self.var17 = 95    
+        self.var18 = 100
+        self.var19 = 105
+        self.var20 = 110
+        self.var21 = 115
+        self.var22 = 120
+        self.var23 = 125
+        self.var24 = 130
+        self.var25 = 135
+        self.var26 = 140   
+        self.var27 = 145
+        self.var28 = 150
 
     def calculate(self):
         self.result = self.var1 * 4 + 2
@@ -46,6 +59,32 @@ class App():
         self.result14 = self.var14 * 3 + 1
     def calculate15(self):
         self.result15 = self.var15 * 2 - 2
+    def calculate16(self):
+        self.result16 = self.var16 * 1 - 1
+    def calculate17(self):
+        self.result17 = self.var17 * 4 + 2
+    def calculate18(self):
+        self.result18 = self.var18 * 3 + 1
+    def calculate19(self):
+        self.result19 = self.var19 * 2 - 2
+    def calculate20(self):
+        self.result20 = self.var20 * 1 - 1
+    def calculate21(self):
+        self.result21 = self.var21 * 4 + 2
+    def calculate22(self):
+        self.result22 = self.var22 * 3 + 1
+    def calculate23(self):
+        self.result23 = self.var23 * 2 - 2
+    def calculate24(self):
+        self.result24 = self.var24 * 1 - 1
+    def calculate25(self):
+        self.result25 = self.var25 * 4 + 2
+    def calculate26(self):
+        self.result26 = self.var26 * 3 + 1
+    def calculate27(self):
+        self.result27 = self.var27 * 2 - 2
+    def calculate28(self):
+        self.result28 = self.var28 * 2 - 2
 
     def retrieve(self):
         return self.result
@@ -77,6 +116,32 @@ class App():
         return self.result14
     def retrieve15(self):
         return self.result15
+    def retrieve16(self):
+        return self.result16
+    def retrieve17(self):
+        return self.result17
+    def retrieve18(self):
+        return self.result18
+    def retrieve19(self):
+        return self.result19
+    def retrieve20(self):
+        return self.result20
+    def retrieve21(self):
+        return self.result21
+    def retrieve22(self):
+        return self.result22
+    def retrieve23(self):
+        return self.result23
+    def retrieve24(self):
+        return self.result24
+    def retrieve25(self):
+        return self.result25
+    def retrieve26(self):
+        return self.result26
+    def retrieve27(self):
+        return self.result27
+    def retrieve28(self):
+        return self.result28
 
 if __name__ == "__main__":
     app = App()
@@ -95,6 +160,19 @@ if __name__ == "__main__":
     app.calculate13()
     app.calculate14()
     app.calculate15()
+    app.calculate16()
+    app.calculate17()
+    app.calculate18()
+    app.calculate19()
+    app.calculate20()
+    app.calculate21()
+    app.calculate22()
+    app.calculate23()
+    app.calculate24()
+    app.calculate25()
+    app.calculate26()
+    app.calculate27()
+    app.calculate28()
     
     print(app.retrieve)
     print(app.retrieve2)
@@ -111,3 +189,16 @@ if __name__ == "__main__":
     print(app.retrieve13)
     print(app.retrieve14)
     print(app.retrieve15)
+    print(app.retrieve16)
+    print(app.retrieve17)
+    print(app.retrieve18)
+    print(app.retrieve19)
+    print(app.retrieve20)
+    print(app.retrieve21)
+    print(app.retrieve22)
+    print(app.retrieve23)
+    print(app.retrieve24)
+    print(app.retrieve25)
+    print(app.retrieve26)
+    print(app.retrieve27)
+    print(app.retrieve28)
