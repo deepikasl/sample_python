@@ -9,7 +9,7 @@ python:
 
 env:
   global:
-    - ENVG: "goo"
+    - ENV1: "goo"
   matrix:
     - ENV1: "foo"
       ENV2: "bar"
