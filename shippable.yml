@@ -1,19 +1,33 @@
-language: python
+resources:
+  - name: sampleNode
+    type: gitRepo
+    repoPath: deepikasl/VT2
+    configuration:
+      integrationName: deepikaGithub
+      branches:
+        only: master
+    initialVersion:
+      sha: master
 
-python:
- # - 2.6
- # - 2.7
-  #- 3.2
-  #- 3.3
-  #- 3.4
-  - pypy
 
-build:
-  ci:
-    - pip install -r requirements.txt
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
-    - which python
-    - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
-    - coverage xml -o shippable/codecoverage/coverage.xml
-    - echo "End of CI sec"
+pipelines:
+  - name: pipeline1
+    setup:
+      runtime: onHost
+    steps:
+      - name: stepA
+        type: bash
+        requires:
+          resources:
+            - sampleNode 
+        execution:
+          onExecute:
+            - echo "executing stepA..."
+            - pip install -r requirements.txt
+            - mkdir -p shippable/testresults
+            - mkdir -p shippable/codecoverage
+            - which python
+            - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
+            - coverage xml -o shippable/codecoverage/coverage.xml
+            - echo "End of CI sec"
+
