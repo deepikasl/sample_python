@@ -17,7 +17,7 @@ pipelines:
       - name: stepA
         type: bash
         requires:
-          integration:
+          integrations:
             - artifactory_int
         execution:
           onExecute:
