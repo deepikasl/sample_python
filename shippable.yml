@@ -22,12 +22,5 @@ pipelines:
         execution:
           onExecute:
             - echo "executing stepA..."
-            - pip install -r requirements.txt
-            - mkdir -p shippable/testresults
-            - mkdir -p shippable/codecoverage
-            - which python
-            - coverage run `which nosetests` test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
-            - coverage xml -o shippable/codecoverage/coverage.xml
-            - echo "End of CI sec"
 
 
