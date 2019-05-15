@@ -17,8 +17,8 @@ pipelines:
       - name: stepA
         type: bash
         requires:
-          resources:
-            - sampleNode
+          integrations:
+            - artifactory_int
         execution:
           onExecute:
             - echo "executing stepA..."
