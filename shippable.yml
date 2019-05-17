@@ -18,7 +18,7 @@ pipelines:
         type: bash
         requires:
           integrations:
-            - artifactory_int
+            - artifactory_int_1
         execution:
           onExecute:
             - echo "executing stepA..."
